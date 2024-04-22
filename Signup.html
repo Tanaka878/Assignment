@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #signup{
+            padding: 20px;
+            background-color: grey;
+        }
+
+        #homelink{
+            text-align: center;
+            font-size: larger;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="signup">Sign Up for Arcade Services</h2>
+        <form action="signUp.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="surname" placeholder="Your Surname" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="password" name="password" id="password" placeholder="Your Password" required>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+            <input type="date" name="dob" placeholder="Date of Birth" required>
+            <select name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+    <script>
+        // Adding password validation
+        var password = document.getElementById("password")
+        var confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords do not match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+
+<div id="homelink">
+    <a href="new.html">Home</a>
+</div>
+</body>
+</html>

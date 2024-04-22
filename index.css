@@ -1,0 +1,13 @@
+#services{
+    background-image: url(im5.jpg);
+    
+    align-content: center;
+    background-size: cover;
+}
+
+#serviceHeader{
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+
+}
