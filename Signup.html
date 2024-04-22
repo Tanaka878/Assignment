@@ -12,7 +12,7 @@
             padding: 0;
         }
         .container {
-            max-width: 400px;
+            max-width: 700px;
             margin: 50px auto;
             padding: 20px;
             background-color: #fff;
@@ -60,11 +60,30 @@
             font-size: larger;
             
         }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2 id="signup">Sign Up for Arcade Services</h2>
+        <nav>
+            <a href="OpeningHours.html">Opening Hours</a>
+            <a href="ServicesOffered.html">Services</a>
+            <a href="Signup.html">Sign Up</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Appointment.html">Make an Appointment</a>
+        </nav>
         <form action="signUp.php" method="post">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="text" name="surname" placeholder="Your Surname" required>
@@ -98,8 +117,6 @@
         confirm_password.onkeyup = validatePassword;
     </script>
 
-<div id="homelink">
-    <a href="new.html">Home</a>
-</div>
+
 </body>
 </html>

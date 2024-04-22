@@ -27,9 +27,28 @@
             font-size: larger;
             
         }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
 </style>
 <body>
     <h1 id="ContactHeader">Make an Appointment</h1>
+    <nav>
+        <a href="OpeningHours.html">Opening Hours</a>
+        <a href="ServicesOffered.html">Services</a>
+        <a href="Signup.html">Sign Up</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Appointment.html">Make an Appointment</a>
+    </nav>
     <form action="submit-appointment.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -60,9 +79,7 @@
         <input type="reset" value="Reset">
     </form>
 
-    <div id="homelink">
-        <a href="new.html">Home</a>
-    </div>
+    
 
     <footer>
         <p>&copy; 2024 Software Development Company. All rights reserved.</p>
