@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Location Frames with Images</title>
+<style>
+    /* Style for the container */
+    .location-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    /* Style for each location frame */
+    .location-frame {
+        width: 50%;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 2px solid #333;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* Style for the heading */
+    .location-heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Style for the address */
+    .location-address {
+        font-size: 16px;
+    }
+
+    /* Style for the image */
+    .location-image {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Colors for different frames */
+    .location-frame:nth-child(odd) {
+        background-color: #ffcccc;
+        border-color: #cc0000;
+    }
+
+    .location-frame:nth-child(even) {
+        background-color: #ccffcc;
+        border-color: #008000;
+    }
+
+    nav {
+            background-color: #757171;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #dbd2d2;
+            margin: 0 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+</style>
+</head>
+<body>
+
+    
+
+    <nav id="serviceHeader">
+        <h1>Location of our company branches</h1>
+        <nav>
+            <a href="OpeningHours.html">Opening Hours</a>
+            <a href="index.html">Home</a>
+            <a href="Signup.html">Sign Up</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Appointment.html">Make an Appointment</a>
+        </nav>
+
+    </nav>
+
+<!-- Location frames container -->
+<div class="location-container">
+    <!-- Location frame 1 -->
+    <div class="location-frame">
+        <img class="location-image" src="loaction.webp".jpg" alt="Location 1">
+        <div class="location-heading">HARARE</div>
+        <div class="location-address">123 Main Street, City</div>
+    </div>
+
+    <!-- Location frame 2 -->
+    <div class="location-frame">
+        <img class="location-image" src="location3.jpg" alt="Location 2">
+        <div class="location-heading">BULAWAYO</div>
+        <div class="location-address">Street:  27 Fleming Dr Burnside</div>
+    </div>
+
+    <!-- Location frame 3 -->
+    <div class="location-frame">
+        <img class="location-image" src="location.webp" alt="Location 3">
+        <div class="location-heading">GWERU</div>
+        <div class="location-address">Street:  3627-32Nd Robert Mugabe Rd</div>
+    </div>
+</div>
+
+<div>
+    
+
+</div>
+
+
+
+</body>
+</html>

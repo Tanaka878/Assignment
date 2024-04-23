@@ -71,6 +71,19 @@
             color: #333;
             margin: 0 10px;
         }
+
+        .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
     </style>
 </head>
 <body>
@@ -79,12 +92,13 @@
         <nav>
             <a href="OpeningHours.html">Opening Hours</a>
             <a href="ServicesOffered.html">Services</a>
-            <a href="Signup.html">Sign Up</a>
+            <a href="index.html">Home</a>
             <a href="About.html">About</a>
             <a href="Contact.html">Contact</a>
             <a href="Appointment.html">Make an Appointment</a>
+            <a href="Location.html">Locations</a>
         </nav>
-        <form action="signUp.php" method="post">
+        <form id="myForm">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="text" name="surname" placeholder="Your Surname" required>
             <input type="email" name="email" placeholder="Your Email" required>
@@ -100,7 +114,41 @@
             <input type="submit" value="Sign Up">
         </form>
     </div>
+
+    <div id="popup" class="popup">
+        <h2>Sign Up Form Submitted</h2>
+        <p>Thank you for signing up for for Arcade Services</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    
+
+    
+
     <script>
+         // Function to open the popup
+         function openPopup() {
+            var popup = document.getElementById('popup');
+            var overlay = document.getElementById('overlay');
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    
+        // Function to close the popup
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            var overlay = document.getElementById('overlay');
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    
+        // Function to handle form submission
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            openPopup(); // Call the function to open the popup
+        });
         // Adding password validation
         var password = document.getElementById("password")
         var confirm_password = document.getElementById("confirm_password");
@@ -115,6 +163,7 @@
 
         password.onchange = validatePassword;
         confirm_password.onkeyup = validatePassword;
+
     </script>
 
 
